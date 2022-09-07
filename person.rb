@@ -42,8 +42,17 @@ class BaseDecorator < Nameable
     end
 end
 
-class CapitalDecorator < BaseDecorator
+class CapitalizeDecorator < BaseDecorator
     def correct_name
       @nameable.correct_name.capitalize
+    end
+end
+
+class TrimmerDecorator
+    def correct_name
+      @nameable.correct_name[0..10]
+      if @nameable.correct_name.length > 10
+        "trim word"
+      end
     end
 end
