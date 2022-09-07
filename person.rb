@@ -30,7 +30,7 @@ class Person < Nameable
   end
 end
 
-class NameableBaseDecorator < Nameable
+class BaseDecorator < Nameable
     attr_accessor :nameable
     def initialize(nameable)
       super()
@@ -39,5 +39,11 @@ class NameableBaseDecorator < Nameable
 
     def correct_name
       @nameable.correct_name
+    end
+end
+
+class CapitalDecorator < BaseDecorator
+    def correct_name
+      @nameable.correct_name.capitalize
     end
 end
