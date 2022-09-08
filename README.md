@@ -1,56 +1,63 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+[![](https://img.shields.io/badge/Microverse-Afolabi%20Akorede-blueviolet)](https://github.com/brainconnect93)
 
-# Project Name
+# OOP-School-Library
 
-> Description the project.
+> This is a school library app implemented using classes, objects, encapsulation and inheritance with Ruby.
+- Add new students or teachers.
+- Add new books.
+- Save records of who borrowed a given book and when.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Ruby
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Ruby
+- Github
+
 ### Setup
+
+- With git, clone the code to your machine, or download a ZIP of all the files directly.
+- Download the ZIP file from this location or run the following git command to clone the files to your machine:
+
+> git clone https://github.com/brainconnect93/OOP-School-Library.git
 
 ### Install
 
+- After opening the files in Visual Studio Code, open the VS Code integrated terminal and run the following commands:
+
+> bundle init
+> bundle install
+
 ### Usage
+
+- Run the command in your terminal below to run the ruby program
+
+>  ruby main.rd to run
 
 ### Run tests
 
-### Deployment
+- Run the command in your terminalbelow for linter checks
 
+> rubocop
 
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Afolabi Akorede**
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@brainconnect93](https://github.com/brainconnect93)
+- Twitter: [@brainconnect0](https://twitter.com/brainconnect0)
+- LinkedIn: [Afolabi Akorede](https://linkedin.com/in/brainconnect93)
 
 ## 🤝 Contributing
 
