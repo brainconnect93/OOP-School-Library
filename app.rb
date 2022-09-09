@@ -27,11 +27,11 @@ class App
       input = gets.chomp.to_i
 
      if input == 1
-       print "Age"
+       print "Age:"
        age = gets.chomp.to_i
-       print "Name"
+       print "Name:"
        name = gets.chomp
-       print "Enter Classroom"
+       print "Enter Classroom:"
        classroom = gets.chomp
        new_student = Student.new(age, classroom)
        new_student.name = name
@@ -39,20 +39,34 @@ class App
        puts "#{new_student.name} added successfully"
 
      elsif input == 2
-       print "Teacher Age"
+       print "Age:"
        age = gets.chomp.to_i
-       print "Name"
+       print "Name:"
        name = gets.chomp
-       print "Specialization"
+       print "Specialization:"
        specialization = gets.chomp
        new_teacher = Teacher.new(age, name, specialization)
        @teachers << new_teacher
        puts "#{new_teacher.name} added successfully"
     end
-  end
+    end
+
+    def create_book
+      print "Book Title:"
+      title = gets.chomp
+      print "Book Author:"
+      author = gets.chomp
+      new_book = Book.new(title, author)
+      @books << new_book
+      puts "#{new_book.title} created successfully"
+    end
 end
 
 app = App.new
+
+book = Book.new("title", "author")
+app.books.push(book)
+app.create_book
 
 # teacher = Teacher.new("age", "name", "specialization")
 # app.teachers.push(teacher)
