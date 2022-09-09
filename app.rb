@@ -60,23 +60,28 @@ class App
       @books << new_book
       puts "#{new_book.title} created successfully"
     end
+
+    def create_rental
+      print "Select a book from the following list by number"
+      list_books
+      book = gets.chomp
+      print "select a person"
+      list_people
+      person = gets.chomp
+      print "select a date"
+      date = gets.chomp
+      new_rental = Rental.new(date, book, person)
+      @rentals << new_rental
+      puts "Rental created successfully"
+    end
+
+    def list_rental
+      print "Enter person id"
+      id = gets.chomp
+      for i in @rentals do
+        if id == i.person.id
+          print "Date: #{i.date}, Title: #{i.book.title}, Author: #{i.book.author}\n"
+        end
+      end
+    end
 end
-
-app = App.new
-
-book = Book.new("title", "author")
-app.books.push(book)
-app.create_book
-
-# teacher = Teacher.new("age", "name", "specialization")
-# app.teachers.push(teacher)
-# app.create_person
-
-# Afolabi = Student.new(20, "classroom")
-# app.students.push(Afolabi)
-# app.list_people
-
-# books = Book.new("Home alone", "Afolabi")
-# app.books.push(books)
-# app.list_books
-
