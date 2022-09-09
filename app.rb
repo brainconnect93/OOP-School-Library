@@ -77,7 +77,7 @@ class App
     puts 'Rental created successfully'
   end
 
-  def list_rental
+  def list_rentals
     print 'Enter person id'
     id = gets.chomp
     @rentals.each do |i|
