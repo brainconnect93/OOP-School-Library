@@ -63,15 +63,16 @@ class App
   end
 
   def create_rental
-    print 'Select a book from the following list by number'
+    print "Select a book from the following list by number \n"
     list_books
-    book = gets.chomp
-    print 'select a person'
+    book = gets.chomp.to_i
+    print "select a person \n"
     list_people
-    person = gets.chomp
+    person = gets.chomp.to_i
     print 'select a date'
     date = gets.chomp
-    new_rental = Rental.new(date, book, person)
+    people = [*@teachers, *@students]
+    new_rental = Rental.new(date, @books[book], people[person])
     @rentals << new_rental
     puts 'Rental created successfully'
   end
