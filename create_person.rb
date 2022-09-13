@@ -8,13 +8,11 @@ class CreatePerson
     case input
     when 1
       new_student = create_student
-      @people.push(new_student)
-      puts "#{new_student.name} added successfully"
+      add_to_collection(new_student)
 
     when 2
       new_teacher = create_teacher
-      @people.push(new_teacher)
-      puts "#{new_teacher.name} added successfully"
+      add_to_collection(new_teacher)
 
     else
       puts 'Invalid input option'
@@ -58,5 +56,10 @@ class CreatePerson
     age, name = age_name
     specialization = collect_specialization
     Teacher.new(age, name, specialization)
+  end
+
+  def add_to_collection(person)
+    @people.push(person)
+    puts "#{person.name} added successfully"
   end
 end
