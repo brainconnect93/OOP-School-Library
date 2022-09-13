@@ -14,7 +14,6 @@ class CreateRental
     person = gets.chomp.to_i
     print 'select a date'
     date = gets.chomp
-    people = [*@teachers, *@students]
     new_rental = Rental.new(date, app.books[book], app.people[person])
     @rentals << new_rental
     puts 'Rental created successfully'
