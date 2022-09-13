@@ -18,7 +18,9 @@ class App
 
   def list_people
     # people = [*@teachers, *@students]
-    @people.each_with_index { |person, i| print "(#{i}) #{person.is_a?(Student) ? '[Student]' : '[Teacher]'} Name: \"#{person.name}\", Age: \"#{person.age}\"\n" }
+    @people.each_with_index do |person, i|
+      puts "(#{i}) #{person.is_a?(Student) ? '[Student]' : '[Teacher]'} Name: \"#{person.name}\", Age: \"#{person.age}"
+    end
   end
 
   def list_rentals
