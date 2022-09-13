@@ -33,7 +33,6 @@ class Main
       @app.list_people
     when 3
       CreatePerson.new(@app.people).create_person
-      print @app.people
     when 4
       CreateBook.new(@app.books).create_book
     when 5
