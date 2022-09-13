@@ -52,15 +52,15 @@ class App
     end
   end
 
-  def create_book
-    print 'Book Title:'
-    title = gets.chomp
-    print 'Book Author:'
-    author = gets.chomp
-    new_book = Book.new(title, author)
-    @books << new_book
-    puts "#{new_book.title} created successfully"
-  end
+  # def create_book
+  #   print 'Book Title:'
+  #   title = gets.chomp
+  #   print 'Book Author:'
+  #   author = gets.chomp
+  #   new_book = Book.new(title, author)
+  #   @books << new_book
+  #   puts "#{new_book.title} created successfully"
+  # end
 
   def create_rental
     print "Select a book from the following list by number \n"
