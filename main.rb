@@ -1,4 +1,6 @@
 require './app'
+require './create_person'
+require './create_book'
 
 class Main
   def initialize
@@ -29,9 +31,9 @@ class Main
     when 2
       @app.list_people
     when 3
-      @app.create_person
+      CreatePerson.new(@app.people).create_person
     when 4
-      @app.create_book
+      CreateBook.new(@app.books).create_book
     when 5
       @app.create_rental
     when 6

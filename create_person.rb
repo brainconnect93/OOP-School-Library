@@ -17,7 +17,7 @@ class CreatePerson
       classroom = gets.chomp
       new_student = Student.new(age, classroom)
       new_student.name = name
-      @students << new_student
+      @people.push(new_student)
       puts "#{new_student.name} added successfully"
 
     when 2
@@ -28,7 +28,7 @@ class CreatePerson
       print 'Specialization:'
       specialization = gets.chomp
       new_teacher = Teacher.new(age, name, specialization)
-      @teachers << new_teacher
+      @people.push(new_teacher)
       puts "#{new_teacher.name} added successfully"
 
     when 3
