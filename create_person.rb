@@ -1,9 +1,8 @@
 class CreatePerson
-    def initialize(people)
-      @people = people
-    end
+  def initialize(people)
+    @people = people
+  end
 
-    
   def create_person
     print 'Do you want to create a student (1) or a teacher (2)? [input a number]:'
     input = gets.chomp.to_i
@@ -31,12 +30,12 @@ class CreatePerson
       new_teacher = Teacher.new(age, name, specialization)
       @teachers << new_teacher
       puts "#{new_teacher.name} added successfully"
-    
-      when 3
-        nil
-      else
-        puts "Invalid input option"
-        create_person
+
+    when 3
+      nil
+    else
+      puts 'Invalid input option'
+      create_person
     end
   end
 end
