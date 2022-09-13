@@ -1,6 +1,7 @@
 require './app'
 require './create_person'
 require './create_book'
+require './create_rental'
 
 class Main
   def initialize
@@ -32,10 +33,11 @@ class Main
       @app.list_people
     when 3
       CreatePerson.new(@app.people).create_person
+      print @app.people
     when 4
       CreateBook.new(@app.books).create_book
     when 5
-      @app.create_rental
+      CreateRental.new(@app.rentals).create_rental(@app)
     when 6
       @app.list_rentals
     end
