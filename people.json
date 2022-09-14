@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 320,
+        "person" : "student",
+        "age" : "23",
+        "name" : "Abubakar Uthman",
+        "classroom" : "Science class"
+    },
+    {
+        "id" : 180,
+        "person" : "student",
+        "age" : "28",
+        "name" : "Dorcas Aremu",
+        "classroom" : "Art class"
+    },
+    {
+        "id" : 250,
+        "person" : "teacher",
+        "age" : "50",
+        "name" : "Dr Badru Akintola",
+        "specialization" : "Lecturer"
+    },
+    {
+        "id" : 380,
+        "person" : "teacher",
+        "age" : "38",
+        "name" : "Thomas Odeyemi",
+        "specialization" : "Principal"
+    }
+]
