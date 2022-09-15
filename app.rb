@@ -26,8 +26,8 @@ class App
   end
 
   def list_rentals
-    print 'Enter person id'
-    id = gets.chomp
+    print 'Enter person id: '
+    id = gets.chomp.to_i
     @rentals.each do |i|
       print "Date: #{i.date}, Title: #{i.book.title}, Author: #{i.book.author}\n" if id == i.person.id
     end

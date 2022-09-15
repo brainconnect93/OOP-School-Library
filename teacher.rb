@@ -1,8 +1,8 @@
 require './person'
 
 class Teacher < Person
-  def initialize(age, name, specialization)
-    super(age, name)
+  def initialize(age, name, specialization, id = Random.rand(1..1000))
+    super(age, name, id)
     @specialization = specialization
   end
 
@@ -13,7 +13,7 @@ class Teacher < Person
   def to_json(*args)
     {
       JSON.create_id => self.class.name,
-      'arguments' => [age, name, @specialization]
+      'arguments' => [age, name, @specialization, id]
     }.to_json(*args)
   end
 
