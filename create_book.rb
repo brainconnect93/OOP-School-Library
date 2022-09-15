@@ -24,11 +24,11 @@ class CreateBook
   def add_to_collection(new_book)
     File.open('books.json', 'r') do |file|
       books = JSON.parse(file.read)
-      @books.push(books)
+      @books = [*@books, *books]
       # books.each_with_index { |book, i| puts "(#{i}) Title: '#{book['Title']}', Author: #{book['Author']} " }
     end
     # @books.push(new_book)
-    book_new = {"Author":new_book.author, "Title":new_book.title}
+    book_new = { Author: new_book.author, Title: new_book.title }
     @books.push(book_new)
     puts "#{new_book.title} created successfully"
     File.open('books.json', 'w+') do |file|
