@@ -1,3 +1,5 @@
+require 'json'
+
 class CreatePerson
   def initialize(people)
     @people = people
@@ -59,7 +61,16 @@ class CreatePerson
   end
 
   def add_to_collection(person)
-    @people.push(person)
+    new_person = {
+      Name: person.name,
+      Age: person.age,
+      Id: person.id
+    }
+    @people.push(new_person)
     puts "#{person.name} added successfully"
+    File.open('people.json', 'w+') do |file|
+      people = JSON.dump(@people)
+      file.write(people)
+    end
   end
 end

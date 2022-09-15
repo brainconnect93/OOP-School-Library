@@ -7,23 +7,20 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    @books = []
-    @people = []
+    books_file = File.open('books.json', 'r')
+    @books = books_file ? JSON.parse(books_file.read) : []
+    people_file = File.open('people.json', 'r')
+    @people = people_file ? JSON.parse(people_file.read) : []
     @rentals = []
   end
 
   def list_books
-    # @books.each_with_index { |book, n| print "(#{n}) Title: \"#{book.title}\", Author: \"#{book.author}\"\n" }
-    File.open('books.json', 'r') do |file|
-      books = JSON.parse(file.read)
-      books.each_with_index { |book, i| puts "(#{i}) Title: '#{book['Title']}', Author: #{book['Author']}" }
-    end
+    @books.each_with_index { |book, n| print "(#{n}) Title: \"#{book['Title']}\", Author: \"#{book['Author']}\"\n" }
   end
 
   def list_people
-    # people = [*@teachers, *@students]
     @people.each_with_index do |person, i|
-      puts "(#{i}) #{person.is_a?(Student) ? '[Student]' : '[Teacher]'} Name: \"#{person.name}\", Age: \"#{person.age}"
+      puts "(#{i}) Name: \"#{person['Name']}\", Age: \"#{person['Age']}\", Id: \"#{person['Id']}\""
     end
   end
 
