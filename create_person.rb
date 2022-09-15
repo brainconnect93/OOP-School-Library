@@ -61,12 +61,9 @@ class CreatePerson
   end
 
   def add_to_collection(person)
-    new_person = {
-      Name: person.name,
-      Age: person.age,
-      Id: person.id
-    }
-    @people.push(new_person)
+    # new_person = JSON.generate(person)
+
+    @people.push(person)
     puts "#{person.name} added successfully"
     File.open('people.json', 'w+') do |file|
       people = JSON.dump(@people)

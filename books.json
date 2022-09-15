@@ -1,1 +1,1 @@
-[{"Author":"ckd","Title":"mifd"},{"Author":"jdcs","Title":"mdcs"},{"Author":"kdc","Title":"kmdc"},{"Author":"Fred","Title":"Tom and Jerry"}]
+[{"json_class":"Book","arguments":["Tom and Jerry","Fred"]},{"json_class":"Book","arguments":["Hello From the outside","Adele"]}]
