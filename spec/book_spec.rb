@@ -10,13 +10,13 @@ describe Book do
     end
 
     describe "#title" do
-        it "should return as a book title" do
+        it "should return a book title" do
             expect(@book.title).to eql "Title"  
         end 
     end
     
     describe "#author" do
-        it "should return as a book author" do
+        it "should return a book author" do
             expect(@book.author).to eql "Author"  
         end 
     end
