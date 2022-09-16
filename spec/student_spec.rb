@@ -33,4 +33,10 @@ describe Student do
             expect(@student.classroom).to eql 'Science'
         end
     end
+
+    describe "#play_hooky" do
+        it "Student should have access to play hooky" do
+            expect(@student.play_hooky).to eql ("¯\(ツ)/¯")
+        end
+    end
 end

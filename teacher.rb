@@ -1,6 +1,8 @@
 require './person'
 
 class Teacher < Person
+  attr_accessor :specialization
+
   def initialize(age, name, specialization, id = Random.rand(1..1000))
     super(age, name, id)
     @specialization = specialization
