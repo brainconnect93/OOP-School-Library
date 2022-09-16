@@ -11,11 +11,11 @@ describe Nameable do
     end
   end
 
-  # describe '#correct_name' do
-  #   it 'should raise an error' do
-  #     expect(@name.correct_name).to raise_error(NotImplementedError)
-  #   end
-  # end
+  describe '#correct_name' do
+    it 'raises a NotImplementedError' do
+      expect { @name.correct_name }.to raise_error(NotImplementedError)
+    end
+  end
 end
 
 describe BaseDecorator do
@@ -52,10 +52,22 @@ describe CapitalizeDecorator do
       expect(@cap_decor.nameable).to eql 'name'
     end
   end
+end
+
+describe TrimmerDecorator do
+  before :each do
+    @trim_decor = TrimmerDecorator.new('name')
+  end
+
+  describe '#new' do
+    it 'Should return basedecorator object' do
+      expect(@trim_decor).to be_an_instance_of TrimmerDecorator
+    end
+  end
 
   describe '#new' do
     it 'Should return nameable object' do
-      expect(@cap_decor.correct_name).to eql 'Name'
+      expect(@trim_decor.nameable).to eql 'name'
     end
   end
 end
