@@ -1,3 +1,5 @@
+require './rental'
+
 class Nameable
   def correct_name
     raise NotImplementedError
@@ -5,7 +7,7 @@ class Nameable
 end
 
 class Person < Nameable
-  attr_accessor :name, :age, :rentals
+  attr_accessor :name, :age, :rentals, :parent_permission
   attr_reader :id
 
   def initialize(age, name = 'Unkonwn', id = Random.rand(1..1000), parent_permission: true)
@@ -28,7 +30,7 @@ class Person < Nameable
   end
 
   def correct_name
-    @name
+    @correct_name = name
   end
 
   def add_rental(date, book)
